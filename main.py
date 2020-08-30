@@ -34,4 +34,14 @@ sent_creation_tx = bdb.transactions.send_commit(fulfilled_creation_tx)
 
 print(fulfilled_creation_tx == sent_creation_tx)
 
+txid = sent_creation_tx['id']
+
 print(sent_creation_tx['id'])
+
+b = bdb.transactions.get(asset_id=txid)
+print('b')
+print(b)
+
+transfer_asset = {
+    'id': asset_id
+}
